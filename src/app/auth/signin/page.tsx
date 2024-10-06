@@ -21,6 +21,7 @@ import LoadingButton from "@/components/loading-button";
 import {
   handleCredentialsSignin,
   handleGithubSignin,
+  handleGoogleSignin,
 } from "@/app/actions/authActions";
 import { useState } from "react";
 import ErrorMessage from "@/components/error-message";
@@ -108,6 +109,12 @@ export default function SignIn() {
             <Button variant="outline" className="w-full" type="submit">
               <GitHubLogoIcon className="h-4 w-4 mr-2" />
               Sign in with GitHub
+            </Button>
+          </form>
+          <form className="w-full" action={handleGoogleSignin}>
+            <Button variant="outline" className="w-full" type="submit">
+              {/* <Google className="h-4 w-4 mr-2" /> */}
+              Sign in with Google
             </Button>
           </form>
         </CardContent>

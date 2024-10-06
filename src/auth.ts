@@ -1,11 +1,13 @@
 import NextAuth from "next-auth";
 import GitHub from "next-auth/providers/github";
+import Google from "next-auth/providers/google";
 // import Credentials from "next-auth/providers/credentials";
 // import Github from "next-auth/providers/github";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     GitHub,
+    Google,
     // Credentials({
     //     credentials: {
     //         email: { label: "Email", type: "email", placeholder: "Email" },
